@@ -11,13 +11,15 @@
 DHT dht(DHTPIN, DHTTYPE);
 
 // ------------------------ WiFi ------------------------
-const char* ssid = "Abimannan";
-const char* password = "abi272901";
+const char* ssid = "Enter WIFI name (if using mobile hotspot enter Hotspot name)";
+const char* password = "enter your password";
 
 // ------------------------ AWS IoT ------------------------
-const char* aws_endpoint = "a2jis5k15pyxz8-ats.iot.us-east-1.amazonaws.com";
+const char* aws_endpoint = "use your end point from aws";
 
-
+// add AWS root CA 
+// add AWS cert
+// add AWS privateKey
 
 // ---------------- AES & HMAC ----------------
 AESLib aesLib;
@@ -27,7 +29,7 @@ byte aes_key[16] = { 0x60, 0x3d, 0xeb, 0x10, 0x15, 0xca, 0x71, 0xbe,
 byte aes_iv[16] = { 0x00, 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07,
                     0x08, 0x09, 0x0a, 0x0b, 0x0c, 0x0d, 0x0e, 0x0f };
 
-const char* hmac_key = "S3cUr3!HMACk3y1234";
+const char* hmac_key = "add your secret key here";
 
 // ---------------- Network Clients ----------------
 WiFiClientSecure net;
